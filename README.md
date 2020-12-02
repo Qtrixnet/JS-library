@@ -51,5 +51,12 @@
 + **accordion-head** - заголовок аккордеона
 + **accordion-content** - контент аккордеона
 + **accordion-inner** - обертка для правильного раскрытия
++ **carousel** - основной слайдер
++ **carousel-indicators** - индикаторы слайдера
++ **carousel-inner** - обертка слайдера
++ **carousel-slides** - обертка всехслайдов
++ **carousel-item** - слайд
++ **carousel-prev** - кнопка назад
++ **carousel-next** - кнопка вперед
 
 
