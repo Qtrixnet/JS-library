@@ -57,25 +57,25 @@ $.prototype.createModal = function ({ text, btns } = {}) {
     }
 
     modal.innerHTML = `
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button class="close" data-close>
-                    <span>&times;</span>
-                </button>
-                <div class="modal-header">
-                    <div class="modal-title">
-                        ${text.title}
-                    </div>
-                </div>
-                <div class="modal-body">
-                    ${text.body}
-                </div>
-                <div class="modal-footer">
-                    
-                </div>
-            </div>
-        </div>
-        `;
+<div class="modal-dialog">
+<div class="modal-content">
+<button class="close" data-close>
+<span>&times;</span>
+</button>
+<div class="modal-header">
+<div class="modal-title">
+${text.title}
+</div>
+</div>
+<div class="modal-body">
+${text.body}
+</div>
+<div class="modal-footer">
+
+</div>
+</div>
+</div>
+`;
 
     modal.querySelector(".modal-footer").append(...buttons);
     document.body.appendChild(modal);

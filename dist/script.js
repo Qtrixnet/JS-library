@@ -1797,22 +1797,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
 
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.accordion = function (headActive = 'accordion-head--active', contentActive = 'accordion-content--active', paddings = 40) {
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.accordion = function (headActive = "accordion-head--active", contentActive = "accordion-content--active", paddings = 40) {
   for (let i = 0; i < this.length; i++) {
     Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(() => {
       Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).toggleClass(headActive);
       Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i].nextElementSibling).toggleClass(contentActive);
 
       if (this[i].classList.contains(headActive)) {
-        this[i].nextElementSibling.style.maxHeight = this[i].nextElementSibling.scrollHeight + paddings + 'px';
+        this[i].nextElementSibling.style.maxHeight = this[i].nextElementSibling.scrollHeight + paddings + "px";
       } else {
-        this[i].nextElementSibling.style.maxHeight = '0px';
+        this[i].nextElementSibling.style.maxHeight = "0px";
       }
     });
   }
 };
 
-Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.accordion-head').accordion();
+Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(".accordion-head").accordion();
 
 /***/ }),
 
@@ -1833,11 +1833,11 @@ __webpack_require__.r(__webpack_exports__);
 
 _core__WEBPACK_IMPORTED_MODULE_1__["default"].prototype.carousel = function () {
   for (let i = 0; i < this.length; i++) {
-    const width = window.getComputedStyle(this[i].querySelector('.carousel-inner')).width;
-    const slides = this[i].querySelectorAll('.carousel-item');
-    const slidesField = this[i].querySelector('.carousel-slides');
-    const dots = this[i].querySelectorAll('.carousel-indicators li');
-    slidesField.style.width = 100 * slides.length + '%';
+    const width = window.getComputedStyle(this[i].querySelector(".carousel-inner")).width;
+    const slides = this[i].querySelectorAll(".carousel-item");
+    const slidesField = this[i].querySelector(".carousel-slides");
+    const dots = this[i].querySelectorAll(".carousel-indicators li");
+    slidesField.style.width = 100 * slides.length + "%";
     slides.forEach(slide => {
       slide.style.width = width;
     });
@@ -1846,10 +1846,10 @@ _core__WEBPACK_IMPORTED_MODULE_1__["default"].prototype.carousel = function () {
     Object(_core__WEBPACK_IMPORTED_MODULE_1__["default"])(this[i].querySelector('[data-slide="next"]')).click(e => {
       e.preventDefault();
 
-      if (offset == +width.replace(/\D/g, '') * (slides.length - 1)) {
+      if (offset == +width.replace(/\D/g, "") * (slides.length - 1)) {
         offset = 0;
       } else {
-        offset += +width.replace(/\D/g, '');
+        offset += +width.replace(/\D/g, "");
       }
 
       slidesField.style.transform = `translateX(-${offset}px)`;
@@ -1860,16 +1860,16 @@ _core__WEBPACK_IMPORTED_MODULE_1__["default"].prototype.carousel = function () {
         slideIndex++;
       }
 
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[slideIndex].classList.add('active');
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[slideIndex].classList.add("active");
     });
     Object(_core__WEBPACK_IMPORTED_MODULE_1__["default"])(this[i].querySelector('[data-slide="prev"]')).click(e => {
       e.preventDefault();
 
       if (offset == 0) {
-        offset = +width.replace(/\D/g, '') * (slides.length - 1);
+        offset = +width.replace(/\D/g, "") * (slides.length - 1);
       } else {
-        offset -= +width.replace(/\D/g, '');
+        offset -= +width.replace(/\D/g, "");
       }
 
       slidesField.style.transform = `translateX(-${offset}px)`;
@@ -1880,22 +1880,22 @@ _core__WEBPACK_IMPORTED_MODULE_1__["default"].prototype.carousel = function () {
         slideIndex--;
       }
 
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[slideIndex].classList.add('active');
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[slideIndex].classList.add("active");
     });
-    const sliderId = this[i].getAttribute('id');
+    const sliderId = this[i].getAttribute("id");
     Object(_core__WEBPACK_IMPORTED_MODULE_1__["default"])(`#${sliderId} .carousel-indicators li`).click(e => {
-      const slideTo = e.target.getAttribute('data-slide-to');
+      const slideTo = e.target.getAttribute("data-slide-to");
       slideIndex = slideTo;
-      offset = +width.replace(/\D/g, '') * slideTo;
+      offset = +width.replace(/\D/g, "") * slideTo;
       slidesField.style.transform = `translateX(-${offset}px)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[slideIndex].classList.add('active');
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[slideIndex].classList.add("active");
     });
   }
 };
 
-Object(_core__WEBPACK_IMPORTED_MODULE_1__["default"])('.carousel').carousel();
+Object(_core__WEBPACK_IMPORTED_MODULE_1__["default"])(".carousel").carousel();
 
 /***/ }),
 
@@ -1913,14 +1913,14 @@ __webpack_require__.r(__webpack_exports__);
 
 _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.dropdown = function () {
   for (let i = 0; i < this.length; i++) {
-    const id = this[i].getAttribute('id');
+    const id = this[i].getAttribute("id");
     Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(() => {
       Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(`[data-toggle-id="${id}"]`).fadeToggle(300);
     });
   }
 };
 
-Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.dropdown-toggle').dropdown();
+Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(".dropdown-toggle").dropdown();
 
 /***/ }),
 
@@ -1998,25 +1998,25 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.createModal = function (
     }
 
     modal.innerHTML = `
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button class="close" data-close>
-                    <span>&times;</span>
-                </button>
-                <div class="modal-header">
-                    <div class="modal-title">
-                        ${text.title}
-                    </div>
-                </div>
-                <div class="modal-body">
-                    ${text.body}
-                </div>
-                <div class="modal-footer">
-                    
-                </div>
-            </div>
-        </div>
-        `;
+<div class="modal-dialog">
+<div class="modal-content">
+<button class="close" data-close>
+<span>&times;</span>
+</button>
+<div class="modal-header">
+<div class="modal-title">
+${text.title}
+</div>
+</div>
+<div class="modal-body">
+${text.body}
+</div>
+<div class="modal-footer">
+
+</div>
+</div>
+</div>
+`;
     modal.querySelector(".modal-footer").append(...buttons);
     document.body.appendChild(modal);
     Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).modal(true);
@@ -2040,13 +2040,13 @@ __webpack_require__.r(__webpack_exports__);
 
 _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.tab = function () {
   for (let i = 0; i < this.length; i++) {
-    Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).on('click', () => {
-      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).addClass('tab-item--active').siblings().removeClass('tab-item--active').closest('.tab').find('.tab-content').removeClass('tab-content--active').eq(Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).index()).addClass('tab-content--active');
+    Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).on("click", () => {
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).addClass("tab-item--active").siblings().removeClass("tab-item--active").closest(".tab").find(".tab-content").removeClass("tab-content--active").eq(Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).index()).addClass("tab-content--active");
     });
   }
 };
 
-Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-tabpanel] .tab-item').tab();
+Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])("[data-tabpanel] .tab-item").tab();
 
 /***/ }),
 
@@ -2585,30 +2585,6 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.post = async function (u
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/lib */ "./src/js/lib/lib.js");
 
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('#first').on('click', () => {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(1).fadeToggle(800);
-});
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-count="second"]').on('click', () => {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).fadeToggle(800);
-});
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').eq(2).on('click', () => {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.w-500').fadeToggle(800);
-});
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('#trigger').click(() => Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('#trigger').createModal({
-  text: {
-    title: 'Modal title',
-    body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum minus doloremque nesciunt enim rem quam corporis? Dolorem pariatur magnam distinctio perferendis. Ratione dolorem voluptates iusto facilis odit veritatis, suscipit voluptatibus!'
-  },
-  btns: {
-    count: 3,
-    settings: [['Close', ['btn-danger', 'mr-10'], true], ['Save changes', ['btn-success'], false, () => {
-      alert('Данные сохранены');
-    }], ['Another btn', ['btn-warning', 'ml-10'], false, () => {
-      alert('Hello World');
-    }]]
-  }
-}));
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])().get('https://jsonplaceholder.typicode.com/todos/1').then(res => console.log(res));
 
 /***/ })
 
