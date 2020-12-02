@@ -2,103 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Library</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="d-flex f-centered">
-            <button class="btn btn-primary m20" id="first">Fade out first text</button>
-            <button class="btn btn-dark m20" data-count="second">Fade out second text</button>
-            <button class="btn btn-warning m20">Fade out all text</button>
-        </div>
-
-        <!-- Dropdown menu -->
-
-        <div class="dropdown">
-            <buttom class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
-                <ul class="dropdown-list" data-toggle-id="dropdownMenuButton">
-                    <li class="dropdown-item"><a href="">Action 1</a></li>
-                    <li class="dropdown-item"><a href="">Action 2</a></li>
-                    <li class="dropdown-item"><a href="">Action 3</a></li>
-                </ul>
-        </div>
-
-        <!-- Card -->
-
-        <div class="goods d-flex f-space-around">
-            <div class="card">
-                <img class="card-img" src="https://www.rosphoto.com/images/u/articles/1510/7_5.jpg" alt="photo">
-                <div class="card-body">
-                    <h5 class="card-title">Card title 1</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita accusantium aliquid itaque, laborum ipsa rem odit? Sit quam veniam dignissimos, deleniti nostrum nemo nam blanditiis dolore beatae, mollitia odio?</p>
-                    <a id="trigger" href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://www.rosphoto.com/images/u/articles/1510/7_5.jpg" alt="photo">
-                <div class="card-body">
-                    <h5 class="card-title">Card title 2</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita accusantium aliquid itaque, laborum ipsa rem odit? Sit quam veniam dignissimos, deleniti nostrum nemo nam blanditiis dolore beatae, mollitia odio?</p>
-                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Link to</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-
-        <!-- <div class="modal" id="exampleModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <button class="close" data-close>
-                <span>&times;</span>
-              </button>
-                    <div class="modal-header">
-                        <div class="modal-title">
-                            Modal title
-                        </div>
-                    </div>
-                    <div class="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloremque, at iste eum dolore cum neque minus eveniet similique quia natus autem aspernatur nostrum dolorum ex non, reiciendis delectus. Quaerat.Quidem vero eveniet
-                        sunt neque adipisci esse, reiciendis doloremque veritatis nostrum atque. Praesentium nobis id, iure quam maiores ullam rerum earum expedita ut quibusdam, ipsa dolore, soluta exercitationem accusamus odio!</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" data-close>Close</button>
-                        <button class="btn btn-success">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="modal" id="exampleModal2">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <button class="close" data-close>
-                      <span>&times;</span>
-                  </button>
-                  <div class="modal-header">
-                      <div class="modal-title">
-                          Modal title #2
-                      </div>
-                  </div>
-                  <div class="modal-body">
-                      Lorem ipsum dolor sit 
-                  </div>
-                  <div class="modal-footer">
-                      <button class="btn btn-danger" data-close>Close</button>
-                      <button class="btn btn-success">Save changes</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      
-
-
+  <div class="container">
+    <div class="d-flex f-centered">
+      <button class="btn btn-primary m20" id="first">Fade out first text</button>
+      <button class="btn btn-dark m20" data-count="second">Fade out second text</button>
+      <button class="btn btn-warning m20">Fade out all text</button>
     </div>
-    <script src='script.js'></script>
+
+    <!-- Dropdown menu -->
+
+    <div class="dropdown">
+      <buttom class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
+        <ul class="dropdown-list" data-toggle-id="dropdownMenuButton">
+          <li class="dropdown-item"><a href="">Action 1</a></li>
+          <li class="dropdown-item"><a href="">Action 2</a></li>
+          <li class="dropdown-item"><a href="">Action 3</a></li>
+        </ul>
+    </div>
+
+    <!-- Card -->
+
+    <div class="goods d-flex f-space-around">
+      <div class="card">
+        <img class="card-img" src="https://www.rosphoto.com/images/u/articles/1510/7_5.jpg" alt="photo">
+        <div class="card-body">
+          <h5 class="card-title">Card title 1</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita accusantium
+            aliquid itaque, laborum ipsa rem odit? Sit quam veniam dignissimos, deleniti nostrum nemo nam blanditiis
+            dolore beatae, mollitia odio?</p>
+          <a id="trigger" href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://www.rosphoto.com/images/u/articles/1510/7_5.jpg" alt="photo">
+        <div class="card-body">
+          <h5 class="card-title">Card title 2</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita accusantium
+            aliquid itaque, laborum ipsa rem odit? Sit quam veniam dignissimos, deleniti nostrum nemo nam blanditiis
+            dolore beatae, mollitia odio?</p>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Link to</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <!-- <div class="modal" id="exampleModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<button class="close" data-close>
+<span>&times;</span>
+</button>
+<div class="modal-header">
+<div class="modal-title">
+Modal title
+</div>
+</div>
+<div class="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloremque, at iste eum dolore cum neque minus eveniet similique quia natus autem aspernatur nostrum dolorum ex non, reiciendis delectus. Quaerat.Quidem vero eveniet
+sunt neque adipisci esse, reiciendis doloremque veritatis nostrum atque. Praesentium nobis id, iure quam maiores ullam rerum earum expedita ut quibusdam, ipsa dolore, soluta exercitationem accusamus odio!</div>
+<div class="modal-footer">
+<button class="btn btn-danger" data-close>Close</button>
+<button class="btn btn-success">Save changes</button>
+</div>
+</div>
+</div>
+</div> -->
+
+    <div class="modal" id="exampleModal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close" data-close>
+            <span>&times;</span>
+          </button>
+          <div class="modal-header">
+            <div class="modal-title">
+              Modal title #2
+            </div>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-close>Close</button>
+            <button class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+
+    <div class="tab mt-20 block-centered">
+      <div class="tab-panel" data-tabpanel>
+        <div class="tab-item tab-item--active">Content 1</div>
+        <div class="tab-item">Content 2</div>
+        <div class="tab-item">Content 3</div>
+      </div>
+      <div class="tab-content tab-content--active">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem architecto vitae sapiente aperiam dignissimos ea odio quaerat. Facere vel dolorem nostrum optio a fugiat, alias eum corrupti assumenda dolor?
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente exercitationem et alias, quia culpa est itaque vel, reiciendis suscipit architecto fuga unde perferendis odit asperiores possimus perspiciatis! Hic, quos?Sapiente quas eius enim pariatur tempora, sint voluptas beatae eum voluptatum odit labore reiciendis dignissimos sit tempore blanditiis nam mollitia delectus. Rerum corrupti est nobis consequuntur earum aliquam dolorem sequi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem architecto vitae sapiente aperiam dignissimos ea odio quaerat. Facere vel dolorem nostrum optio a fugiat, alias eum corrupti assumenda dolor?
+        Error, praesentium amet? Incidunt beatae facere impedit eos odit illo delectus blanditiis eaque, officiis vitae, tenetur quis corrupti cumque doloremque. Voluptatum architecto eligendi dignissimos hic aliquam, reiciendis ut fugit a?
+        Doloremque in, nam iste modi repellat quisquam. Iure tempora necessitatibus assumenda voluptates incidunt voluptas ex repudiandae aliquam deserunt eos iusto cupiditate amet numquam dicta tenetur, neque quae, corporis quod consequatur.
+      </div>
+      <div class="tab-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem architecto vitae sapiente aperiam dignissimos ea odio quaerat. Facere vel dolorem nostrum optio a fugiat, alias eum corrupti assumenda dolor?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem architecto vitae sapiente aperiam dignissimos ea odio quaerat. Facere vel dolorem nostrum optio a fugiat, alias eum corrupti assumenda dolor?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem architecto vitae sapiente aperiam dignissimos ea odio quaerat. Facere vel dolorem nostrum optio a fugiat, alias eum corrupti assumenda dolor?
+        Error, praesentium amet? Incidunt beatae facere impedit eos odit illo delectus blanditiis eaque, officiis vitae, tenetur quis corrupti cumque doloremque. Voluptatum architecto eligendi dignissimos hic aliquam, reiciendis ut fugit a?
+        Doloremque in, nam iste modi repellat quisquam. Iure tempora necessitatibus assumenda voluptates incidunt voluptas ex repudiandae aliquam deserunt eos iusto cupiditate amet numquam dicta tenetur, neque quae, corporis quod consequatur.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente exercitationem et alias, quia culpa est itaque vel, reiciendis suscipit architecto fuga unde perferendis odit asperiores possimus perspiciatis! Hic, quos?Sapiente quas eius enim pariatur tempora, sint voluptas beatae eum voluptatum odit labore reiciendis dignissimos sit tempore blanditiis nam mollitia delectus. Rerum corrupti est nobis consequuntur earum aliquam dolorem sequi.
+      </div>
+      <div class="tab-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem architecto vitae sapiente aperiam dignissimos ea odio quaerat. Facere vel dolorem nostrum optio a fugiat, alias eum corrupti assumenda dolor?
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente exercitationem et alias, quia culpa est itaque vel, reiciendis suscipit architecto fuga unde perferendis odit asperiores possimus perspiciatis! Hic, quos?Sapiente quas eius enim pariatur tempora, sint voluptas beatae eum voluptatum odit labore reiciendis dignissimos sit tempore blanditiis 
+      </div>
+    </div>
+
+  </div>
+  <script src='script.js'></script>
 </body>
 
 </html>
