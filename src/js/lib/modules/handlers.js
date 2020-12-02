@@ -33,22 +33,22 @@ $.prototype.click = function (handler) {
   return this;
 };
 
-$.prototype.setAttr = function (name, value) {
-  // if (name.tagName) {
-  //   return this;
-  // }
-  for (let i = 0; i < this.length; i++) {
-    this[i].setAttribute(name, value);
-  }
-  return this;
-};
+// $.prototype.setAttr = function (name, value) {
+//   // if (name.tagName) {
+//   //   return this;
+//   // }
+//   for (let i = 0; i < this.length; i++) {
+//     this[i].setAttribute(name, value);
+//   }
+//   return this;
+// };
 
-$.prototype.getAttr = function (name) {
-  // if (name.tagName) {
-  //   return this;
-  // }
-  for (let i = 0; i < this.length; i++) {
-    this[i].getAttribute(name);
-  }
-  return this;
-};
+// $.prototype.getAttr = function (name) {
+//   // if (name.tagName) {
+//   //   return this;
+//   // }
+//   for (let i = 0; i < this.length; i++) {
+//     this[i].getAttribute(name);
+//   }
+//   return this;
+// };

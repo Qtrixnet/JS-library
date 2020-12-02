@@ -96,18 +96,55 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
+ // $.prototype.dropdown = function() {
+//     for (let i = 0; i < this.length; i++) {
+//         const id = $(this[i]).getAttr('id'); //! используется свой метод getAttr, возможно не работает. Проверить.
+//         $(this[i]).click(() => {
+//             $(`[data-toggle-id = "${id}"]`).fadeToggle(300);
+//         });
+//     }
+// };
+
+/***/ }),
+
+/***/ "./src/js/lib/components/modal.js":
+/*!****************************************!*\
+  !*** ./src/js/lib/components/modal.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
 
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.dropdown = function () {
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.modal = function () {
   for (let i = 0; i < this.length; i++) {
-    const id = this[i].getAttribute('id');
-    Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(() => {
-      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(`[data-toggle-id="${id}"]`).fadeToggle(300);
+    const target = this[i].getAttribute('data-target');
+    Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(e => {
+      e.preventDefault();
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(target).fadeIn(500);
+      document.body.style.overflow = 'hidden';
     });
   }
+
+  const closeElements = document.querySelectorAll('[data-close]');
+  closeElements.forEach(elem => {
+    Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(elem).click(() => {
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.modal').fadeOut(500);
+      document.body.style.overflow = '';
+    });
+  });
+  Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.modal').click(e => {
+    if (e.target.classList.contains('modal')) {
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.modal').fadeOut(500);
+      document.body.style.overflow = '';
+    }
+  });
 };
 
-Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('.dropdown-toggle').dropdown();
+Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-toggle="modal"]').modal();
 
 /***/ }),
 
@@ -162,6 +199,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/actions */ "./src/js/lib/modules/actions.js");
 /* harmony import */ var _modules_effects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/effects */ "./src/js/lib/modules/effects.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/lib/components/dropdown.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal */ "./src/js/lib/components/modal.js");
+
 
 
 
@@ -548,29 +587,24 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.click = function (handle
   }
 
   return this;
-};
-
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.setAttr = function (name, value) {
-  // if (name.tagName) {
-  //   return this;
-  // }
-  for (let i = 0; i < this.length; i++) {
-    this[i].setAttribute(name, value);
-  }
-
-  return this;
-};
-
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.getAttr = function (name) {
-  // if (name.tagName) {
-  //   return this;
-  // }
-  for (let i = 0; i < this.length; i++) {
-    this[i].getAttribute(name);
-  }
-
-  return this;
-};
+}; // $.prototype.setAttr = function (name, value) {
+//   // if (name.tagName) {
+//   //   return this;
+//   // }
+//   for (let i = 0; i < this.length; i++) {
+//     this[i].setAttribute(name, value);
+//   }
+//   return this;
+// };
+// $.prototype.getAttr = function (name) {
+//   // if (name.tagName) {
+//   //   return this;
+//   // }
+//   for (let i = 0; i < this.length; i++) {
+//     this[i].getAttribute(name);
+//   }
+//   return this;
+// };
 
 /***/ }),
 
@@ -594,15 +628,6 @@ Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-count="second"]'
 Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').eq(2).on('click', () => {
   Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.w-500').fadeToggle(800);
 });
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.wrap').html(`<div class="dropdown">
-  <buttom class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
-      <ul class="dropdown-list" data-toggle-id="dropdownMenuButton">
-          <li class="dropdown-item"><a href="">Action 1</a></li>
-          <li class="dropdown-item"><a href="">Action 2</a></li>
-          <li class="dropdown-item"><a href="">Action 3</a></li>
-      </ul>
-</div>`);
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.dropdown-toggle').dropdown();
 
 /***/ })
 
