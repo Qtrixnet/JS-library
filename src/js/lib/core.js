@@ -1,16 +1,16 @@
-const $ = function (selector) {
+const $ = function(selector) {
   return new $.prototype.init(selector);
 };
 
-$.prototype.init = function (selector) {
+$.prototype.init = function(selector) {
   if (!selector) {
-    return this; // {} пустой объект
+      return this; // {}
   }
 
   if (selector.tagName) {
-    this[0] = selector;
-    this.length = 1;
-    return this;
+      this[0] = selector;
+      this.length = 1;
+      return this;
   }
 
   Object.assign(this, document.querySelectorAll(selector));
