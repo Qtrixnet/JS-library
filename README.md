@@ -47,5 +47,9 @@
 + **tab-panel** - панель табов
 + **tab-item** - элемент (таб)
 + **tab-content** - контент таба
++ **accordion** - аккордеон
++ **accordion-head** - заголовок аккордеона
++ **accordion-content** - контент аккордеона
++ **accordion-inner** - обертка для правильного раскрытия
 
 
